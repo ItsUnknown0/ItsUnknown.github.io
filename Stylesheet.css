@@ -12,7 +12,7 @@ h1 {
     margin-right: auto;
 }
 
-h2,h3,p,figcaption {
+h2,h3,p,figcaption,footer {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: honeydew;
 }
@@ -48,13 +48,18 @@ h2,h3,p,figcaption {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    width: 200px;
-    height: 200px;
+    
+    max-width: 50%;
+    max-height: 50%;
 }
 
-.CutePriceIcons {
+.CutePriceIcons,.CuteFooterIcons {
     width: 15px;
     height: 15px;
+}
+
+.Footer {
+    text-align: center;
 }
 
 .AboutMe {
@@ -70,6 +75,13 @@ h2,h3,p,figcaption {
 
     margin-right: 20px;
     margin-left: 20px;
+
+    border: solid;
+    border-width: 0;
+    border-color: rgba(0,0,0,0);
+
+    transition: all 0.3s ease-out;
+    animation: WooshFromTheLeft 1s ease-out;
 }
 
 .Availibility {
@@ -85,6 +97,13 @@ h2,h3,p,figcaption {
 
     margin-right: 20px;
     margin-left: 20px;
+
+    border: solid;
+    border-width: 0;
+    border-color: rgba(0,0,0,0);
+
+    transition: all 0.3s ease-out;
+    animation: WooshFromTheTop 1s ease-out;
 }
 
 .Past-Works {
@@ -104,6 +123,7 @@ h2,h3,p,figcaption {
     margin-right: auto;
 }
 
+
 .PaymentInfo {
     width: 50%;
     background-color: rgba(240, 255, 255, 0.13);
@@ -117,7 +137,15 @@ h2,h3,p,figcaption {
     margin-top: 30px;
     margin-right: 20px;
     margin-left: 20px;
+
+    border: solid;
+    border-width: 0;
+    border-color: rgba(0,0,0,0);
+
+    transition: all 0.3s ease-out;
+    animation: WooshFromTheRight 1s ease-out;
 }
+
 
 .Contact-Info {
     background-color: rgba(109, 95, 172, 0.13);
@@ -134,7 +162,15 @@ h2,h3,p,figcaption {
     margin-top: 30px;
     margin-right: 20px;
     margin-left: 20px;
+
+    border: solid;
+    border-width: 0;
+    border-color: rgba(0,0,0,0);
+
+    transition: all 0.3s ease-out;
+    animation: FadeIn 2s ease-out;
 }
+
 
 .CommissionsPriceFrame {
     background-color: rgba(240, 255, 255, 0.13);
@@ -166,6 +202,66 @@ h2,h3,p,figcaption {
     text-align: center;
     color: rgb(5, 34, 53);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    border: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.37);
+}
+
+/*Animations*/
+
+@keyframes FadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes WooshFromTheLeft {
+
+    from {
+        transform: translate(-1000px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes WooshFromTheTop {
+
+    from {
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes WooshFromTheRight {
+
+    from {
+        transform: translate(1000px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+
 }
 
 /*Events and stuff*/
@@ -189,4 +285,29 @@ a:hover{
 ::-webkit-scrollbar-thumb {
     background: rgb(76, 93, 104);
     border-radius: 25px;
+}
+
+.Contact-Info:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 217, 255, 0.356);
+    border-width: 1px;
+}
+
+.PaymentInfo:hover {
+    transform: translateY(-5px);
+    border-color: rgba(105, 245, 198, 0.356);
+    border-width: 1px;
+}
+
+.Availibility:hover {
+    transform: translateY(-5px);
+    border-color: rgba(105, 245, 198, 0.356);
+    border-width: 1px;
+}
+
+
+.AboutMe:hover {
+    transform: translateY(-5px);
+    border-color: rgba(105, 245, 198, 0.356);
+    border-width: 1px;
 }
