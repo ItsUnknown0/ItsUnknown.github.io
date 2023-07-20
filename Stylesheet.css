@@ -12,7 +12,7 @@ h1 {
     margin-right: auto;
 }
 
-h2,h3,p,figcaption {
+h2,h3,p,figcaption,footer {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: honeydew;
 }
@@ -53,9 +53,13 @@ h2,h3,p,figcaption {
     max-height: 50%;
 }
 
-.CutePriceIcons {
+.CutePriceIcons,.CuteFooterIcons {
     width: 15px;
     height: 15px;
+}
+
+.Footer {
+    text-align: center;
 }
 
 .AboutMe {
@@ -77,6 +81,7 @@ h2,h3,p,figcaption {
     border-color: rgba(0,0,0,0);
 
     transition: all 0.3s ease-out;
+    animation: WooshFromTheLeft 1s ease-out;
 }
 
 .Availibility {
@@ -98,6 +103,7 @@ h2,h3,p,figcaption {
     border-color: rgba(0,0,0,0);
 
     transition: all 0.3s ease-out;
+    animation: WooshFromTheTop 1s ease-out;
 }
 
 .Past-Works {
@@ -137,6 +143,7 @@ h2,h3,p,figcaption {
     border-color: rgba(0,0,0,0);
 
     transition: all 0.3s ease-out;
+    animation: WooshFromTheRight 1s ease-out;
 }
 
 
@@ -161,6 +168,7 @@ h2,h3,p,figcaption {
     border-color: rgba(0,0,0,0);
 
     transition: all 0.3s ease-out;
+    animation: FadeIn 2s ease-out;
 }
 
 
@@ -198,6 +206,62 @@ h2,h3,p,figcaption {
     border: solid;
     border-width: 1px;
     border-color: rgba(255, 255, 255, 0.37);
+}
+
+/*Animations*/
+
+@keyframes FadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes WooshFromTheLeft {
+
+    from {
+        transform: translate(-1000px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes WooshFromTheTop {
+
+    from {
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+
+}
+
+@keyframes WooshFromTheRight {
+
+    from {
+        transform: translate(1000px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+
 }
 
 /*Events and stuff*/
